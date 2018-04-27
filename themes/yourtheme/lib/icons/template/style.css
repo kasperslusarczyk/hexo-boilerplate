@@ -1,0 +1,15 @@
+.svg-icon {
+  font-size: 0;
+  display: block;
+}
+
+<% icons.forEach(function (icon) { %>
+.svg-<%- icon.name %> {
+  background: url(../images/icons/<%= backgroundUrl %>);
+  background-position: <%- -icon.left %>px <%- -icon.top %>px;
+  background: url(../images/icons/<%= icon.name %>.svg) no-repeat 0 0,
+    linear-gradient(transparent, transparent);
+  width: <%- icon.width %>px;
+  height: <%- icon.height %>px;
+}
+<% }) %>
